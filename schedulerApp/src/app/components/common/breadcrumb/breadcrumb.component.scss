@@ -1,0 +1,3 @@
+.app-breadcrumb{padding:0px;list-style:none;}
+.app-breadcrumb li{display:inline-block;} 
+.app-breadcrumb>li+li:before {content:"/";}

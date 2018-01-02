@@ -1,0 +1,19 @@
+.login-wrapper {
+  margin: 2% auto;
+  padding: 50px 100px;
+  width: 600px;
+  background-color: #fff;
+  label {
+    font-weight: bold;
+  }
+  .error-message {
+    color: #D31612;
+  }
+  .form-control[type=password] {
+    color: #757575;
+    font-size: 1rem;
+  }
+  h1 {
+    text-align: center;
+  }
+}
