@@ -1,7 +1,7 @@
-<h3 id="raul-page-header-page" *ngIf="breadcrumbs && breadcrumbs.length" class="raul-page-header-page">
+<h3 *ngIf="breadcrumbs && breadcrumbs.length" class="page-header-page">
   <span class=" _700">{{breadcrumbs[1].label}}</span>
 </h3>
-<div id="raul-page-header-breadcrumbs" class="raul-page-header-breadcrumbs">
+<div class="page-header-breadcrumbs">
   <ol class="app-breadcrumb">
     <li *ngFor="let breadcrumb of breadcrumbs">
       <a [routerLink]="[breadcrumb.url]" [ngClass]="{'_700': breadcrumb.active}">{{ breadcrumb.label }}</a>

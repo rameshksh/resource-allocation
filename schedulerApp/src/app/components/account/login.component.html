@@ -1,37 +1,38 @@
 <div class="login-wrapper">
   <h1 class="m-b-lg">
-   Resource Scheduler
+    Resource Scheduler
   </h1>
-  <form name="loginForm" action="/login" method="POST">
-      <div class="row">
-          <div class="col-sm-12">
-              <div class="form-group">
-                  <label class="">Username</label>
-                  <input type="text" class="form-control" name="userName" />
-              </div>
-          </div>
-          <div class="col-sm-12">
-              <div class="form-group">
-                  <label class="">Password</label>
-                  <input type="password" class="form-control" name="password" />
-              </div>
-          </div>
-          <div class="col-sm-12">
-            <div class="form-group">
-                <label class="">Remember Me</label>
-                <input type="checkbox" class="form-control" name="rememberMe" />
-            </div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label class="">Username</label>
+          <input type="text" class="form-control" name="userName" />
         </div>
       </div>
-      <div class="row error-message" *ngIf="errorMessage.length" >
-          <div class="col-sm-12">
-              You have entered an invalid username, password combination.
-          </div>
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label class="">Password</label>
+          <input type="password" class="form-control" name="password" />
+        </div>
       </div>
-      <div class="row p-t">
-          <div class="col-sm-12">
-              <span class="btn btn-primary rounded w-full btn-login">Login</span>
-          </div>
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label class="">
+            <input type="checkbox" name="rememberMe" /> Remember Me
+          </label>
+        </div>
       </div>
+    </div>
+    <div class="row error-message" *ngIf="errorMessage.length">
+      <div class="col-sm-12">
+        You have entered an invalid username, password combination.
+      </div>
+    </div>
+    <div class="row p-t">
+      <div class="col-sm-12">
+        <button type="submit" class="btn btn-primary rounded w-full btn-login">Login</button>
+      </div>
+    </div>
   </form>
 </div>
